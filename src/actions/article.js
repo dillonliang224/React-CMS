@@ -1,4 +1,5 @@
 import { createActions } from 'redux-actions';
+import fetch from 'isomorphic-fetch';
 
 export const { fetchArticle } = createActions({
     FETCH_ARTICLE: async (articleId) => {
