@@ -5,15 +5,6 @@ export default handleActions({
     FETCH_ARTICLES: (state, action) => {
         let payload = action.payload;
 
-        return {...state, isFetching: true, articles: [
-            {
-                title: 'i love you',
-                publish_time: 11111
-            },
-            {
-                title: 'game over',
-                publish_time: 33333
-            }
-        ]};
+        return {...state, isFetching: false, articles: payload.articles};
     }
 }, {});

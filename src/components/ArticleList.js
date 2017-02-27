@@ -3,7 +3,7 @@ require('styles/App.css');
 
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { fetchArticles } from '../actions/articles.js';
+//import { fetchArticles } from '../actions/articles.js';
 
 let yeomanImage = require('../images/yeoman.png');
 
@@ -15,7 +15,7 @@ class ArticleList extends React.Component {
     componentWillMount(){
         const { dispatch } = this.props;
 
-        dispatch(fetchArticles());
+        //dispatch(fetchArticles());
     }
 
     render() {
@@ -55,12 +55,11 @@ ArticleList.displayName = 'ArticleList';
 ArticleList.propTypes = {
     page: PropTypes.number,
     articles: PropTypes.array,
-    isFetchting: PropTypes.bool,
-    dispatch: PropTypes.func
+    isFetchting: PropTypes.bool
+    //dispatch: PropTypes.func
 };
 
-ArticleList.defaultProps = {
-};
+ArticleList.defaultProps = {};
 
 function mapStateToProps (state) {
     const { articlesReducer } = state;
@@ -68,16 +67,16 @@ function mapStateToProps (state) {
     const {
         isFetching,
         articles: articles
-    } = articlesReducer['all'] || {
+    } = {
         isFetching: true,
-        articles: [
+        articles: articlesReducer || [
             {
-                title: '20170223 test 01',
-                publish_time: 20170223
+                title: '20170227 test 01',
+                publish_time: 20170227
             },
             {
-                title: '20170223 test 02',
-                publish_time: 20170223
+                title: '20170227 test 02',
+                publish_time: 20170227
             }
         ]
     };

@@ -7,17 +7,20 @@ let defaultSettings = require('./defaults');
 
 // Add needed plugins here
 let BowerWebpackPlugin = require('bower-webpack-plugin');
+//var hotMiddlewareScript = 'webpack-hot-middleware/client?reload=true';
 
 let config = Object.assign({}, baseConfig, {
   entry: [
     'babel-polyfill',
     'webpack-dev-server/client?http://127.0.0.1:' + defaultSettings.port,
     'webpack/hot/only-dev-server',
+    //hotMiddlewareScript,
     './src/index'
   ],
   cache: true,
   devtool: 'eval-source-map',
   plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new BowerWebpackPlugin({

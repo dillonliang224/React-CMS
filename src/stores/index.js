@@ -8,12 +8,13 @@ import rootReducer from '../reducers/index.js'
 // 获取日志中间件
 const loggerMiddleware = createLogger();
 
-// TODO: applyMiddleware ()()
-const createStoreWithMiddleware = applyMiddleware(
+// TODO: applyMiddleware source code
+var store = createStore(
+  rootReducer,
+  applyMiddleware(
     promiseMiddleware,
     loggerMiddleware
-)(createStore);
+  )
+);
 
-export default function store() {
-    createStoreWithMiddleware(rootReducer);
-}
+export default store;

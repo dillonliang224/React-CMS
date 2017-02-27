@@ -1,10 +1,14 @@
 import { createActions } from 'redux-actions';
-import fetch from 'isomorphic-fetch';
 
 export const { fetchArticle } = createActions({
     FETCH_ARTICLE: async (articleId) => {
         try {
-            let response = await fetch('/api/getArticle?articleId=${articleId}');
+            let response = await fetch('/api/articles/' + articleId, {
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              }
+            });
             let article = await response.json();
             return { article }
         } catch (err) {
