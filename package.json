@@ -16,8 +16,7 @@
     "serve:dist": "node server.js --env=dist",
     "start": "node server.js --env=dev",
     "test": "karma start",
-    "test:watch": "karma start --autoWatch=true --singleRun=false",
-    "feed": "node ./server/feed/index.js --env=dev"
+    "test:watch": "karma start --autoWatch=true --singleRun=false"
   },
   "repository": "",
   "keywords": [],
@@ -65,11 +64,9 @@
     "webpack-hot-middleware": "^2.17.0"
   },
   "dependencies": {
-    "cheerio": "^0.22.0",
     "core-js": "^2.0.0",
     "express": "^4.14.1",
     "mongoose": "^4.8.4",
-    "node-schedule": "^1.2.0",
     "normalize.css": "^4.0.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
@@ -77,7 +74,6 @@
     "redux": "^3.6.0",
     "redux-actions": "^1.2.1",
     "redux-logger": "^2.8.1",
-    "redux-promise": "^0.5.3",
-    "request": "^2.79.0"
+    "redux-promise": "^0.5.3"
   }
 }
