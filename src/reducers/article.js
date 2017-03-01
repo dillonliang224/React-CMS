@@ -1,6 +1,6 @@
 import { handleActions } from 'redux-actions';
 
-import { FETCH_ARTICLE } from '../actions/index.js';
+import { fetchArticle } from '../actions/index.js';
 
 export default handleActions({
     FETCH_ARTICLE: (state, action) => {

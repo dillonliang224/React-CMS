@@ -1,5 +1,6 @@
 require('babel-core/register');
 require('babel-polyfill');
+require('isomorphic-fetch')
 import 'core-js/fn/object/assign';
 import React from 'react';
 import ReactDOM from 'react-dom';

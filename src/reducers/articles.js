@@ -1,10 +1,11 @@
 import { handleActions } from 'redux-actions';
-import { FETCH_ARTICLES } from '../actions/index.js';
+import { fetchArticles } from '../actions/index.js';
 
 export default handleActions({
     FETCH_ARTICLES: (state, action) => {
         let payload = action.payload;
+        console.log('dillon: in articles.js reducer: ' + payload.articles);
 
-        return {...state, isFetching: false, articles: payload.articles};
+        return {...state, isFetching: true, articles: payload.articles};
     }
 }, {});
