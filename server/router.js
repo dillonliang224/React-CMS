@@ -30,7 +30,7 @@ router.put('/api/article/:articleId', function (req, res, next) {
 });
 
 router.delete('/api/article/:articleId', function (req, res, next) {
-  res.send('delete')；
+  res.send('delete');
 });
 
 module.exports = router;

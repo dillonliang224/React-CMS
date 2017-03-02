@@ -6,15 +6,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
+
 import store from './stores/index.js'
 import routes from './routes.js';
 
 const root = (
-    <Provider store={ store } key='provider'>
-      <Router history={ browserHistory }>
-        { routes }
-      </Router>
-   </Provider>
+  <Provider store={ store } key='provider'>
+    <Router history={ browserHistory }>
+      { routes }
+    </Router>
+  </Provider>
 );
 
 // Render the main component into the dom
