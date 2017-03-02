@@ -5,8 +5,6 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { fetchArticles } from '../actions/articles.js';
 
-let yeomanImage = require('../images/yeoman.png');
-
 class ArticleList extends React.Component {
     constructor(props){
         super(props)
@@ -38,7 +36,6 @@ class ArticleList extends React.Component {
         return (
             <section className='mod-articles'>
               <ul>
-                  <img src={yeomanImage} alt="Yeoman Generator" />
                   <header>简书</header>
                   {articleNodes}
               </ul>

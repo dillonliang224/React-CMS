@@ -1,22 +1,17 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
 
-class ArticleList extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+class Article extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-    render() {
-
-        return (
-            <section>
-                <header>jianshu Articles</header>
-                <ul>
-                </ul>
-            </section>
-        );
-
-    }
+  render() {
+    return (
+      <section>
+        <header>Article Detail Page</header>
+      </section>
+    );
+  }
 }
 
-export default ArticleList;
+export default Article;

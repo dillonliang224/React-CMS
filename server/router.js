@@ -26,11 +26,11 @@ router.post('/api/articles/', function (req, res, next) {
 });
 
 router.put('/api/article/:articleId', function (req, res, next) {
-  res.send('delete');
+  res.send('put');
 });
 
 router.delete('/api/article/:articleId', function (req, res, next) {
-  res.send('delete')
+  res.send('delete')；
 });
 
 module.exports = router;

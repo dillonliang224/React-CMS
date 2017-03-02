@@ -5,14 +5,15 @@ import 'core-js/fn/object/assign';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { Router, browserHistory } from 'react-router';
 import store from './stores/index.js'
-//import App from './components/Main.js';
-import App from './components/ArticleList.js';
-//import App from './components/Article.js';
+import routes from './routes.js';
 
 const root = (
-   <Provider store={store} key='provider'>
-       <App />
+    <Provider store={ store } key='provider'>
+      <Router history={ browserHistory }>
+        { routes }
+      </Router>
    </Provider>
 );
 
