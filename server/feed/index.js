@@ -5,13 +5,6 @@ var {save} = require('../data/Article.js');
 var url = 'http://www.jianshu.com/'
 var article_list = [];
 
-var data = {
-    title: 'jianshu',
-    author: 'dillon liang',
-    date: Date.now(),
-    articles: []
-}
-
 function startGame(url) {
   getData(url)
 }
@@ -33,7 +26,8 @@ function getData(url) {
               author_avatar = avatar_info.find('img').attr('src'),
               author_name = $('.article .author .info .name a').text().trim(),
               article_meta = $('.article .author .info .meta'),
-              publish_time = article_meta.find('.publish-time').text().trim(),
+              publish_time,
+              //publish_time = article_meta.find('.publish-time').text().trim(),
               wordage = article_meta.find('.wordage').text().trim(),
               content = $('.article .show-content ').html(),
               abstract = $('.article .show-content p').first().text().slice(0, 80),

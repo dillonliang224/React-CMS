@@ -4,9 +4,7 @@ export const { fetchArticles } = createActions({
     FETCH_ARTICLES: async () => {
         try {
             let response = await fetch('/api/articles', {
-              method: 'GET',
               headers: {
-                'Content-Type': 'application/json',
                 'Accept': 'application/json',
                 'Access-Control-Allow-Origin': '*'
               }

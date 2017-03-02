@@ -23,29 +23,26 @@ class ArticleList extends React.Component {
         const articleNodes = [];
 
         if (articles) {
-            articles.forEach(function (article, i) {
-                articleNodes.push(<ArticleLi key={i} article={article} />)
+            articles.forEach(function (article, index) {
+                let articleURL = '/p/' + article._id;
+                articleNodes.push(
+                  <li key={'dillon-' + index}>
+                    <a href={articleURL}>
+                      {index + 1}. {article.title} -- {article._id}
+                    </a>
+                  </li>
+                )
             });
         }
 
         return (
-            <ul className='cms-article-list'>
-                <img src={yeomanImage} alt="Yeoman Generator" />
-                {articleNodes}
-            </ul>
-        )
-    }
-}
-
-class ArticleLi extends React.Component {
-    render() {
-        const { article } = this.props;
-
-        return (
-            <li>
-                <h3>{article.title}</h3>
-                <span>{article.publish_time}</span>
-            </li>
+            <section className='mod-articles'>
+              <ul>
+                  <img src={yeomanImage} alt="Yeoman Generator" />
+                  <header>简书</header>
+                  {articleNodes}
+              </ul>
+            </section>
         )
     }
 }

@@ -8,7 +8,7 @@ exports.save = function (article) {
         if (err) {
             console.log(err);
         } else {
-            console.log('save user successfully');
+            console.log('save article successfully');
         }
     })
 }
