@@ -1,18 +1,32 @@
 /* Base Application Styles */
-body {
+html, body {
+  height: 100%;
+  width: 100%;
   padding: 0;
   margin: 0;
+  font-size: 14px;
   /*color: #fff;
   background: #222;*/
 }
 
 a {
   text-decoration: none;
+  font-size: 17px;
 }
 
 ul {
   list-style: none;
 }
+
+/* Custom antd begin*/
+.ant-layout {
+  min-height: 100%;
+}
+
+.ant-layout-content {
+  flex: 1;
+}
+/* Custom antd end*/
 
 .mod-articles img {
   margin: 40px auto;
@@ -35,4 +49,9 @@ ul {
 .mod-articles ul {
   list-style: none;
   line-height: 30px;
+}
+
+/* Home Page Footer */
+.mod-footer {
+  text-align: center;
 }

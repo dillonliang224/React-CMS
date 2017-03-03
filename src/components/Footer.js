@@ -7,7 +7,7 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <footer style={{ textAlign: 'center' }}>
+      <footer className='mod-footer'>
         <ul>
           <li className='author'>Author: Dillon Liang</li>
           <li className='email'>Email: dillonliang224@163.com</li>

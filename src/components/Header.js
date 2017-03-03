@@ -30,7 +30,6 @@ class Header extends React.Component {
             <Link to='/'>首页</Link>
           </Menu.Item>
           <Menu.Item key='curriculum_vitae'>
-            <Icon type='file' />
             <Link to='/curriculum_vitae'>简历</Link>
           </Menu.Item>
         </Menu>

@@ -15,7 +15,7 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div id='mod-header'>
+      <div id='mod-container'>
         <Layout>
           <Header />
           <Content style={{backgroundColor: '#EDEDED', padding:"15px 5%"}}>{ this.props.children }</Content>

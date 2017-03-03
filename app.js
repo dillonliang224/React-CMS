@@ -21,15 +21,26 @@ if (isDev) {
     noInfo: true,
     stats: {
       colors: true
-    }
+    },
+    headers: {
+         'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Methods":"PUT,POST,GET,DELETE,OPTIONS"
+    },
   }));
 
   app.use(webpackHotMiddleware(compiler));
   app.use(express.static(__dirname + '/public'));
 
+  app.all("*",(req,res,next)=>{
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With');
+    res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+    next();
+  });
+
   const router = require('./server/router.js')
   app.use('/', router);
   app.listen('8000', function() {
-    console.log('game being');
+    console.log('dillon: start server at port 8000');
   })
 }
