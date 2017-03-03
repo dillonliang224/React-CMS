@@ -7,8 +7,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 
-import store from './stores/index.js'
-import routes from './routes.js';
+import store from '../common/stores/index.js'
+import routes from '../common/routes.js';
 
 const root = (
   <Provider store={ store } key='provider'>

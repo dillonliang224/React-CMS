@@ -25,7 +25,7 @@ exports.findArticles = function (callback) {
 }
 
 exports.findArticleById = function (articleId, callback) {
-    Article.find({"id": articleId}, function (err, article) {
+    Article.find({"_id": articleId}, function (err, article) {
         if (!err) {
             console.log('get article with article id: ' + articleId);
             callback(article);

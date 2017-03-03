@@ -15,7 +15,7 @@ let config = Object.assign({}, baseConfig, {
     'webpack-dev-server/client?http://127.0.0.1:' + defaultSettings.port,
     'webpack/hot/only-dev-server',
     //hotMiddlewareScript,
-    './src/index'
+    './src/client/index'
   ],
   cache: true,
   devtool: 'eval-source-map',

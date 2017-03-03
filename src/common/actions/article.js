@@ -1,9 +1,9 @@
 import { createActions } from 'redux-actions';
 
 export const { fetchArticle } = createActions({
-  FETCH_ARTICLE: async (articleId) => {
+  FETCH_ARTICLE: async (articleId = {}) => {
     try {
-      let response = await fetch('/api/articles/' + articleId, {
+      let response = await fetch('/api/article/' + articleId, {
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
