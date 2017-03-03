@@ -26,7 +26,7 @@ class Header extends React.Component {
           <Menu.Item key='logo'>
             <Link to='/'><img src={ yeomanImage } /></Link>
           </Menu.Item>
-          <Menu.Item key='List'>
+          <Menu.Item key='list'>
             <Link to='/'>首页</Link>
           </Menu.Item>
           <Menu.Item key='curriculum_vitae'>

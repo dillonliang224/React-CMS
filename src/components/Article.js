@@ -5,20 +5,25 @@ class Article extends React.Component {
   constructor(props) {
     super(props);
   }
-
+  
   render() {
-
+    const { articles, params } = this.props;
+    let article = articles.filter((item) => item._id === params.id)[0];
+    console.log(article.title);
     return (
       <section>
-        <header>Article Detail Page</header>
+        <h3>{ article.title }</h3>
+        <div dangerouslySetInnerHTML={{__html: article.content}}></div>
       </section>
     );
   }
 }
 
 function mapStateToProps(state) {
-  console.log(state);
-  return;
+  const articlesData = state.articles.articles;
+  return {
+    articles: articlesData
+  };
 }
 
-export default Article;
+export default connect(mapStateToProps)(Article);
