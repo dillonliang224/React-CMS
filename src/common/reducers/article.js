@@ -8,4 +8,9 @@ export default handleActions({
 
     return payload.article;
   }
+  // ,
+  // DELETE_ARTICLE: (state, action) => {
+  //   let payload = action.payload;
+  //   return payload.text;
+  // }
 }, {});

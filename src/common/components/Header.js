@@ -24,13 +24,18 @@ class Header extends React.Component {
       <div>
         <Menu selectedKeys={ [this.state.current] } theme='dark' mode='horizontal' onClick={ this.handleClick }>
           <Menu.Item key='logo'>
-            <Link to='/'><img src={ yeomanImage } /></Link>
+            <Link to='/'>
+              <img src={ yeomanImage } />
+            </Link>
           </Menu.Item>
           <Menu.Item key='list'>
             <Link to='/'>首页</Link>
           </Menu.Item>
-          <Menu.Item key='curriculum_vitae'>
-            <Link to='/curriculum_vitae'>简历</Link>
+          <Menu.Item key='curriculum-vitae'>
+            <Link to='/curriculum-vitae'>简历</Link>
+          </Menu.Item>
+          <Menu.Item key='edit-article'>
+            <Link to='/edit-article'>写文章</Link>
           </Menu.Item>
         </Menu>
       </div>

@@ -1,6 +1,3 @@
-require('normalize.css/normalize.css');
-require('styles/App.css');
-
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';

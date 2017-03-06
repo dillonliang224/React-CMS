@@ -8,6 +8,7 @@ import Footer from './Footer';
 
 const { Content } = Layout;
 
+require('../styles/App.css');
 class Home extends React.Component {
   constructor(props) {
     super(props);

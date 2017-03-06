@@ -1,10 +1,8 @@
 'use strict';
-
 require('babel-register');
 require('babel-polyfill');
 
 var express = require('express');
-//import express = require('express');
 var app = express();
 
 app.engine('.html', require('ejs').__express);
@@ -43,12 +41,8 @@ if (isDev) {
     next();
   });
 
-  const router = require('./src/server/routes.js');
-  // const apiRouter = require('./server/routes/apiRouter');
-  // const frontRouter = require('./server/routes/frontRouter');
-  // app.use('/api', apiRouter);
-  // app.use('*', frontRouter);
-  app.use('/', router)
+  const routes = require('./src/server/routes.js');
+  app.use('/', routes)
   app.listen('8000', function() {
     console.log('dillon: start server at port 8000');
   })

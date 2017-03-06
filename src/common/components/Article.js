@@ -5,15 +5,15 @@ class Article extends React.Component {
   constructor(props) {
     super(props);
   }
-  
+
   render() {
     const { articles, params } = this.props;
     let article = articles.filter((item) => item._id === params.id)[0];
     console.log(article.title);
     return (
-      <section>
-        <h3>{ article.title }</h3>
-        <div dangerouslySetInnerHTML={{__html: article.content}}></div>
+      <section className='mod-article-detail'>
+        <h1 className='title'>{ article.title } </h1>
+        <div className='show-content' dangerouslySetInnerHTML={{__html: article.content}}></div>
       </section>
     );
   }

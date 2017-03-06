@@ -15,4 +15,16 @@ export const { fetchArticle } = createActions({
       console.log(err);
     }
   }
+  // ,
+  // DELETE_ARTICLE: async (articleId) => {
+  //   try {
+  //     let response = await fetch('/api/article/' + articleId, {
+  //       method: 'DELETE'
+  //     });
+  //
+  //     return response.ok ? 'Delete Article Successfully' : 'Delete Article Error';
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
 });
